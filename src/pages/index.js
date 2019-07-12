@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 import ReactModal from 'react-modal';
@@ -12,7 +11,8 @@ class IndexPage extends React.Component {
   constructor () {
     super();
     this.state = {
-      showModal: false
+      showModal: false,
+      iframeHeight: '0px'
     };
     
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -46,6 +46,7 @@ class IndexPage extends React.Component {
             onmousewheel=""
             width="100%"
             height="100%"
+            title="contato"
             style={{ 
               background: `transparent`, 
               height: `100%`,
@@ -72,6 +73,7 @@ class IndexPage extends React.Component {
             onmousewheel=""
             width="100%"
             height="533"
+            title="eletronicos"
             style={{ background: `transparent`, border: `1px solid #ccc` }}
           />
         </TabPanel>
@@ -83,6 +85,7 @@ class IndexPage extends React.Component {
             onmousewheel=""
             width="100%"
             height="533"
+            title="moveis"
             style={{ background: `transparent`, border: `1px solid #ccc` }}
           />
         </TabPanel>
@@ -94,6 +97,7 @@ class IndexPage extends React.Component {
             onmousewheel=""
             width="100%"
             height="533"
+            title="diversos"
             style={{ background: `transparent`, border: `1px solid #ccc` }}
           />
         </TabPanel>

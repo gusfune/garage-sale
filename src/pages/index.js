@@ -79,8 +79,8 @@ class IndexPage extends React.Component {
         <Tabs>
           <TabList>
             <Tab>Eletrônicos & Eletrodomésticos</Tab>
-            <Tab>Móveis</Tab>
-            <Tab>Diversos</Tab>
+            <Tab disabled="true">Móveis</Tab>
+            <Tab disabled="true">Diversos</Tab>
           </TabList>
 
           <TabPanel>

@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { Helmet } from "react-helmet";
 import Header from "./header"
 import "./layout.scss"
 
@@ -25,6 +25,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap" rel="stylesheet" />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -36,6 +39,16 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
+      <footer
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0px 1.0875rem 1.45rem`,
+          paddingTop: 0,
+        }}
+      >
+        <p>Made with <a href="https://gatsbyjs.org" rel="noopener noreferrer" target="_blank">GatsbyJS</a> and <a href="https://github.com/gusfune/garage-sale" rel="noopener noreferrer" target="_blank">available open source.</a></p>
+      </footer>
     </>
   )
 }

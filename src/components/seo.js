@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import coverImage from "../images/android-chrome-512x512.png"
 
-function SEO({ description, lang, meta, title, image, url }) {
+function SEO({ description, lang, meta, title, url }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -51,7 +52,7 @@ function SEO({ description, lang, meta, title, image, url }) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.url}/${site.siteMetadata.image}`
+          content: `${site.siteMetadata.url}/${coverImage}`
         },
         {
           property: `og:url`,
@@ -86,6 +87,7 @@ SEO.defaultProps = {
   lang: `pt`,
   meta: [],
   description: ``,
+  image: null
 }
 
 SEO.propTypes = {
@@ -93,6 +95,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string
 }
 
 export default SEO

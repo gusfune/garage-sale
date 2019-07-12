@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import ReactModal from 'react-modal'
-import "./index.css"
+import "./index.scss"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

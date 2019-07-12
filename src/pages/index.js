@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Link } from 'gatsby'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import ReactModal from 'react-modal'
@@ -29,8 +30,16 @@ class IndexPage extends React.Component {
     return(
       <Layout>
         <SEO title="Home" />
+
         <p>Estamos indo embora do país e vamos vender várias coisas que temos em casa. Aqui estão os itens já catalogados. Em breve vamos adicionar mais coisas.</p>
-        <p>Interessado em algo? <a href="#" onClick={this.handleOpenModal}>Clique aqui</a>, preenche o formulário em um minuto e retornaremos em breve.</p>
+        <p>Interessado em algo? &nbsp;
+          <Link
+            onClick={this.handleOpenModal}
+          >
+            Clique aqui
+          </Link>
+          , preencha o formulário em um minuto e retornaremos em breve.
+        </p>
 
         <ReactModal
           isOpen={this.state.showModal}
@@ -53,7 +62,11 @@ class IndexPage extends React.Component {
             }}
           />
           <p className="close">
-            <a href="#" onClick={this.handleCloseModal}>Fechar [x]</a>
+            <Link
+              onClick={this.handleCloseModal}
+            >
+              Fechar [x]
+            </Link>
           </p>
         </ReactModal>
 

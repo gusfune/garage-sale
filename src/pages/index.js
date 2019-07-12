@@ -1,7 +1,7 @@
-import React from "react"
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "react-tabs/style/react-tabs.css";
-import ReactModal from 'react-modal';
+import React, { Component } from 'react'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import 'react-tabs/style/react-tabs.css'
+import ReactModal from 'react-modal'
 import "./index.css"
 
 import Layout from "../components/layout"
@@ -11,20 +11,19 @@ class IndexPage extends React.Component {
   constructor () {
     super();
     this.state = {
-      showModal: false,
-      iframeHeight: '0px'
+      showModal: false
     };
     
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this)
+    this.handleCloseModal = this.handleCloseModal.bind(this)
   }
   
   handleOpenModal () {
-    this.setState({ showModal: true });
+    this.setState({ showModal: true })
   }
   
   handleCloseModal () {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false })
   }
   render() {
     return(
@@ -40,9 +39,9 @@ class IndexPage extends React.Component {
           }}
         >
           <iframe
-            class="airtable-embed" 
+            className="airtable-embed airtable-embed airtable-dynamic-height" 
             src="https://airtable.com/embed/shrYnhFtNTXu5GiTC?backgroundColor=purple"
-            frameborder="0"
+            frameBorder="0"
             onmousewheel=""
             width="100%"
             height="100%"
@@ -65,43 +64,40 @@ class IndexPage extends React.Component {
             <Tab>Diversos</Tab>
           </TabList>
 
-        <TabPanel>
-          <iframe
-            class="airtable-embed" 
-            src="https://airtable.com/embed/shrHykWNSJy1HhZQS?backgroundColor=purple&viewControls=on"
-            frameborder="0"
-            onmousewheel=""
-            width="100%"
-            height="533"
-            title="eletronicos"
-            style={{ background: `transparent`, border: `1px solid #ccc` }}
-          />
-        </TabPanel>
-        <TabPanel>
-          <iframe
-            class="airtable-embed" 
-            src="https://airtable.com/embed/shrPQlNvbmpGXAEeM?backgroundColor=purple&viewControls=on"
-            frameborder="0"
-            onmousewheel=""
-            width="100%"
-            height="533"
-            title="moveis"
-            style={{ background: `transparent`, border: `1px solid #ccc` }}
-          />
-        </TabPanel>
-        <TabPanel>
-          <iframe
-            class="airtable-embed" 
-            src="https://airtable.com/embed/shrEB5MVwvtWZAhjv?backgroundColor=purple&viewControls=on"
-            frameborder="0"
-            onmousewheel=""
-            width="100%"
-            height="533"
-            title="diversos"
-            style={{ background: `transparent`, border: `1px solid #ccc` }}
-          />
-        </TabPanel>
-      </Tabs>
+          <TabPanel>
+            <iframe
+              className="airtable-embed" 
+              src="https://airtable.com/embed/shrHykWNSJy1HhZQS?backgroundColor=purple&viewControls=on"
+              frameBorder="0"
+              width="100%"
+              height="533"
+              title="eletronicos"
+              style={{ background: `transparent`, border: `1px solid #ccc` }}
+            />
+          </TabPanel>
+          <TabPanel>
+            <iframe
+              className="airtable-embed" 
+              src="https://airtable.com/embed/shrPQlNvbmpGXAEeM?backgroundColor=purple&viewControls=on"
+              frameborder="0"
+              width="100%"
+              height="533"
+              title="moveis"
+              style={{ background: `transparent`, border: `1px solid #ccc` }}
+            />
+          </TabPanel>
+          <TabPanel>
+            <iframe
+              className="airtable-embed" 
+              src="https://airtable.com/embed/shrEB5MVwvtWZAhjv?backgroundColor=purple&viewControls=on"
+              frameBorder="0"
+              width="100%"
+              height="533"
+              title="diversos"
+              style={{ background: `transparent`, border: `1px solid #ccc` }}
+            />
+          </TabPanel>
+        </Tabs>
       </Layout>
     )
   }

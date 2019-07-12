@@ -44,14 +44,19 @@ class IndexPage extends React.Component {
         <ReactModal
           isOpen={this.state.showModal}
           style={{
-            overflow: `hidden`
+            overlay: {
+              background: `rgba(0, 0, 0, 0.8)`
+            },
+            content: {
+              overflow: `hidden`,
+              padding: `0`
+            }
           }}
         >
           <iframe
             className="airtable-embed airtable-embed airtable-dynamic-height" 
             src="https://airtable.com/embed/shrYnhFtNTXu5GiTC?backgroundColor=purple"
             frameBorder="0"
-            onmousewheel=""
             width="100%"
             height="100%"
             title="contato"
@@ -89,6 +94,8 @@ class IndexPage extends React.Component {
             />
           </TabPanel>
           <TabPanel>
+            <h3>Em breve</h3>
+            {/*}
             <iframe
               className="airtable-embed" 
               src="https://airtable.com/embed/shrPQlNvbmpGXAEeM?backgroundColor=purple"
@@ -98,8 +105,11 @@ class IndexPage extends React.Component {
               title="moveis"
               style={{ background: `transparent`, border: `1px solid #ccc` }}
             />
+            {*/}
           </TabPanel>
           <TabPanel>
+            <h3>Em breve</h3>
+            {/*}
             <iframe
               className="airtable-embed" 
               src="https://airtable.com/embed/shrEB5MVwvtWZAhjv?backgroundColor=purple"
@@ -109,6 +119,7 @@ class IndexPage extends React.Component {
               title="diversos"
               style={{ background: `transparent`, border: `1px solid #ccc` }}
             />
+            {*/}
           </TabPanel>
         </Tabs>
       </Layout>

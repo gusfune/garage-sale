@@ -1,8 +1,16 @@
 .close {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
+    color: purple;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 .react-tabs__tab {
     margin-bottom: 0;
+}
+h3 {
+    margin: 2rem auto;
 }

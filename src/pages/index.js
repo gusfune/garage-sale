@@ -80,7 +80,7 @@ class IndexPage extends React.Component {
           <TabPanel>
             <iframe
               className="airtable-embed" 
-              src="https://airtable.com/embed/shrHykWNSJy1HhZQS?backgroundColor=purple&viewControls=on"
+              src="https://airtable.com/embed/shrHykWNSJy1HhZQS?backgroundColor=purple"
               frameBorder="0"
               width="100%"
               height="533"
@@ -91,7 +91,7 @@ class IndexPage extends React.Component {
           <TabPanel>
             <iframe
               className="airtable-embed" 
-              src="https://airtable.com/embed/shrPQlNvbmpGXAEeM?backgroundColor=purple&viewControls=on"
+              src="https://airtable.com/embed/shrPQlNvbmpGXAEeM?backgroundColor=purple"
               frameborder="0"
               width="100%"
               height="533"
@@ -102,7 +102,7 @@ class IndexPage extends React.Component {
           <TabPanel>
             <iframe
               className="airtable-embed" 
-              src="https://airtable.com/embed/shrEB5MVwvtWZAhjv?backgroundColor=purple&viewControls=on"
+              src="https://airtable.com/embed/shrEB5MVwvtWZAhjv?backgroundColor=purple"
               frameBorder="0"
               width="100%"
               height="533"

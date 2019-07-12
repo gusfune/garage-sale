@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `🇸🇪 Garage Sale Gus & Ju 🇸🇪`,
+    title: `Garage Sale Gus & Ju 🇸🇪`,
     description: `Várias coisas a venda para nossa mudança`,
     author: `@gusfune`,
     url: `https://sale.gusfune.com`,

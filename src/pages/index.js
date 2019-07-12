@@ -41,7 +41,11 @@ class IndexPage extends React.Component {
           <Link onClick={this.handleOpenModal}>Clique aqui</Link>, preencha o
           formulário em um minuto e retornaremos em breve.
         </p>
-
+        <p>
+          O catálogo de itens disponíveis está abaixo. Esta parte abaixo é
+          apenas um catálogo, caso tenha interesse envie uma mensagem pelo{" "}
+          <Link onClick={this.handleOpenModal}>formulário de contato</Link>, ok?
+        </p>
         <ReactModal
           isOpen={this.state.showModal}
           style={{
@@ -87,10 +91,10 @@ class IndexPage extends React.Component {
               width="100%"
               height="533"
               title="eletronicos"
-              style={{ 
-                background: `transparent`, 
+              style={{
+                background: `transparent`,
                 border: `1px solid #ccc`,
-                'min-height': `100vh`
+                "min-height": `100vh`,
               }}
             />
           </TabPanel>

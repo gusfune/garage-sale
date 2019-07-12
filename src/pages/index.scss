@@ -6,18 +6,25 @@ h3,
 p {
   font-family: "Open Sans", sans-serif;
 }
+a {
+  color: rebeccapurple;
+}
 .close {
   position: absolute;
   top: 0;
   right: 1rem;
-  color: purple;
+  color: rebeccapurple;
   a {
     text-decoration: none;
     color: inherit;
   }
 }
+.react-tabs__tab-list,
 .react-tabs__tab {
   margin-bottom: 0;
+}
+.react-tabs__tab-panel {
+  min-height: 100vh;
 }
 h3 {
   margin: 2rem auto;

@@ -87,7 +87,11 @@ class IndexPage extends React.Component {
               width="100%"
               height="533"
               title="eletronicos"
-              style={{ background: `transparent`, border: `1px solid #ccc` }}
+              style={{ 
+                background: `transparent`, 
+                border: `1px solid #ccc`,
+                'min-height': `100vh`
+              }}
             />
           </TabPanel>
           <TabPanel>

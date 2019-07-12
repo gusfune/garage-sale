@@ -5,7 +5,7 @@ module.exports = {
     author: `@gusfune`,
     url: `https://sale.gusfune.com`,
     image: `src/images/android-chrome-512x512.png`,
-    twitterUsername: "@gusfune"
+    twitterUsername: "@gusfune",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-7103855-5"
+        trackingId: "UA-7103855-5",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

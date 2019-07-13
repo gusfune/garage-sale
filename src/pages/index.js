@@ -30,7 +30,6 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home" />
-
         <p>
           Estamos indo embora do país e vamos vender várias coisas que temos em
           casa. Aqui estão os itens já catalogados. Estamos adicionando itens
@@ -79,8 +78,8 @@ class IndexPage extends React.Component {
         <Tabs>
           <TabList>
             <Tab>Eletrônicos & Eletrodomésticos</Tab>
-            <Tab disabled="true">Móveis</Tab>
-            <Tab disabled="true">Diversos</Tab>
+            <Tab disabled="true">Móveis (em breve)</Tab>
+            <Tab disabled="true">Diversos (em breve)</Tab>
           </TabList>
 
           <TabPanel>

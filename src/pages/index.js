@@ -5,6 +5,8 @@ import "react-tabs/style/react-tabs.css"
 import ReactModal from "react-modal"
 import "./index.scss"
 
+import EletrodomesticosSection from "../components/eletrodomesticosSection"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -83,19 +85,7 @@ class IndexPage extends React.Component {
           </TabList>
 
           <TabPanel>
-            <iframe
-              className="airtable-embed"
-              src="https://airtable.com/embed/shrHykWNSJy1HhZQS?backgroundColor=purple"
-              frameBorder="0"
-              width="100%"
-              height="533"
-              title="eletronicos"
-              style={{
-                background: `transparent`,
-                border: `1px solid #ccc`,
-                "min-height": `100vh`,
-              }}
-            />
+            <EletrodomesticosSection />
           </TabPanel>
           <TabPanel>
             <h3>Em breve</h3>

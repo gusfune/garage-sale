@@ -38,10 +38,14 @@ export default () => (
         }
       }
     `}
-    render={data =>
-      data.allAirtable.edges.map((node, index) => (
-        <EletrodomesticosUnit content={node.node.data} />
-      ))
-    }
+    render={data => (
+      <div className="container">
+        <div className="row">
+          {data.allAirtable.edges.map((node, index) => (
+            <EletrodomesticosUnit content={node.node.data} index={index} />
+          ))}
+        </div>
+      </div>
+    )}
   />
 )

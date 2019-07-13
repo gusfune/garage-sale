@@ -4,7 +4,7 @@ module.exports = {
     description: `Várias coisas a venda para nossa mudança`,
     author: `@gusfune`,
     url: `https://sale.gusfune.com`,
-    image: `src/images/android-chrome-512x512.png`,
+    image: `src/images/cover.jpg`,
     twitterUsername: "@gusfune",
   },
   plugins: [
@@ -28,7 +28,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/android-chrome-512x512.png`, // This path is relative to the root of the site.
+        icon: `src/images/cover.jpg`, // This path is relative to the root of the site.
       },
     },
     {

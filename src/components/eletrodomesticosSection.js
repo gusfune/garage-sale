@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
-import EletrodomesticosUnit from "./eletrodomesticosUnit"
+import ProductUnit from "./ProductUnit"
 
 export default class EletrodomesticosSection extends Component {
   render() {
@@ -49,7 +49,7 @@ export default class EletrodomesticosSection extends Component {
           <div className="container">
             <div className="row">
               {data.allAirtable.edges.map((node, index) => (
-                <EletrodomesticosUnit
+                <ProductUnit
                   content={node.node.data}
                   index={index}
                   id={node.node.id}

@@ -9,9 +9,9 @@ import {
 } from "reactstrap"
 import ReadMore from "./ReadMore"
 import Gallery from "./Gallery"
-import "./eletrodomesticosUnit.scss"
+import "./ProductUnit.scss"
 
-export default class EletrodomesticosUnit extends Component {
+export default class ProductUnit extends Component {
   render() {
     return (
       <div className="col-xs-12 col-sm-6 col-md-4" key={this.props.id}>

@@ -37,11 +37,11 @@ class ReadMore extends Component {
     const { expanded, truncated } = this.state
 
     return (
-      <div className="readmore" itemProp="description">
+      <div className="readmore">
         <Truncate
           lines={!expanded && lines}
           ellipsis={
-            <span>
+            <span itemProp="description">
               ...{" "}
               <button href="#" onClick={this.toggleLines}>
                 {more}

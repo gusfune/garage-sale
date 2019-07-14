@@ -92,7 +92,7 @@ export default class ProductUnit extends Component {
                   </span>
                   <link
                     itemprop="availability"
-                    href="http://schema.org/InStock"
+                    href="https://schema.org/InStock"
                   />
                 </Badge>
                 {/* eslint-enable */}

@@ -43,10 +43,10 @@ export default class Gallery extends Component {
               onClick={() => this.setState({ photoIndex: index, isOpen: true })}
             >
               <Img
-                fixed={node.childImageSharp.fixed}
+                fluid={node.childImageSharp.fluid}
                 objectFit="cover"
                 objectPosition="50% 50%"
-                alt={node.childImageSharp.fixed.originalName}
+                alt={node.childImageSharp.fluid.originalName}
                 className="card-img-top"
                 itemProp="image"
               />

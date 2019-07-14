@@ -33,6 +33,7 @@ export default class EletrodomesticosSection extends Component {
                           }
                           fluid {
                             ...GatsbyImageSharpFluid
+                            originalName
                           }
                         }
                         id

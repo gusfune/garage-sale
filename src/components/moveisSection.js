@@ -32,6 +32,7 @@ export default class MoveisSection extends Component {
                           }
                           fluid {
                             ...GatsbyImageSharpFluid
+                            originalName
                           }
                         }
                         id

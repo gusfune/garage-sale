@@ -32,6 +32,7 @@ export default class DiversosSection extends Component {
                           }
                           fluid {
                             ...GatsbyImageSharpFluid
+                            originalName
                           }
                         }
                         id

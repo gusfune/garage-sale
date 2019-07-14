@@ -17,7 +17,7 @@ class EletrodomesticosUnit extends Component {
           {this.props.content.fileNode.map(node => (
             <img src={node.url} className="card-img-top" alt="img" />
           ))}
-          
+
           <CardBody>
             {this.props.content.Marca && (
               <CardSubtitle>

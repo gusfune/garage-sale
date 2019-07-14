@@ -5,11 +5,12 @@ import Lightbox from "react-image-lightbox"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "react-image-lightbox/style.css"
 
-const statusFormatter = (current, total) => (
-  <span>
-    {current} de {total}
-  </span>
-)
+const statusFormatter = (current, total) =>
+  total > 1 && (
+    <span>
+      {current} de {total}
+    </span>
+  )
 
 export default class Gallery extends Component {
   constructor(props) {
@@ -26,9 +27,11 @@ export default class Gallery extends Component {
 
     return (
       <div key={this.index}>
+        {console.log(this.props.images.length)}
         <Carousel
           infiniteLoop={true}
           showThumbs={false}
+          showIndicators={this.props.images.length < 2 ? false : true}
           statusFormatter={statusFormatter}
         >
           {this.props.images.map((node, index) => (

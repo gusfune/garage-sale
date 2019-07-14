@@ -7,21 +7,17 @@ export default class EletrodomesticosSection extends Component {
     return (
       <StaticQuery
         query={graphql`
-          query Eletrodomesticos {
+          query Moveis {
             allAirtable(
-              filter: {
-                table: { eq: "Eletrodomesticos" }
-                data: { O_que_fazer: { eq: "A Venda" } }
-              }
               sort: { order: ASC, fields: data___Name }
+              filter: { table: { eq: "Moveis" } }
             ) {
               edges {
                 node {
                   id
                   data {
-                    Ano
+                    Name
                     Descricao
-                    Especificacoes
                     Fotos {
                       localFiles {
                         childImageSharp {
@@ -37,11 +33,7 @@ export default class EletrodomesticosSection extends Component {
                         url
                       }
                     }
-                    Marca
-                    Modelo
-                    Name
                     Preco
-                    Voltagem
                   }
                 }
               }
@@ -56,7 +48,7 @@ export default class EletrodomesticosSection extends Component {
                   content={node.node.data}
                   index={index}
                   id={node.node.id}
-                  key={"electro" + node.node.id}
+                  key={"movel" + node.node.id}
                   modalPass={this.props.modalPass}
                 />
               ))}

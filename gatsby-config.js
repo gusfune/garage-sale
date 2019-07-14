@@ -49,6 +49,16 @@ module.exports = {
             tableName: `Eletrodomesticos`,
             mapping: { Fotos: `fileNode` },
           },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `Moveis`,
+            mapping: { Fotos: `fileNode` },
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `Diversos`,
+            mapping: { Fotos: `fileNode` },
+          }
         ],
       },
     },

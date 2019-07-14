@@ -18,13 +18,8 @@ export default () => (
                 Ano
                 Descricao
                 Especificacoes
-                Fotos {
+                fileNode {
                   filename
-                  thumbnails {
-                    small {
-                      url
-                    }
-                  }
                   url
                 }
                 Marca

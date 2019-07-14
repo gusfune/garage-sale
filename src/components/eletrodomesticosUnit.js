@@ -3,12 +3,9 @@ import {
   Badge,
   Card,
   CardHeader,
-  CardImg,
   CardText,
   CardBody,
-  CardTitle,
   CardSubtitle,
-  Button,
 } from "reactstrap"
 
 class EletrodomesticosUnit extends Component {
@@ -17,7 +14,10 @@ class EletrodomesticosUnit extends Component {
       <div className="col-sm-4">
         <Card key={this.props.index}>
           <CardHeader tag="h4">{this.props.content.Name}</CardHeader>
-          <img src="https://via.placeholder.com/600x400?text=Imagem" className="card-img-top" alt="img" />
+          {this.props.content.fileNode.map(node => (
+            <img src={node.url} className="card-img-top" alt="img" />
+          ))}
+          
           <CardBody>
             {this.props.content.Marca && (
               <CardSubtitle>

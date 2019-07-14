@@ -43,9 +43,9 @@ class ReadMore extends Component {
           ellipsis={
             <div>
               ...{" "}
-              <a href="#" onClick={this.toggleLines}>
+              <button href="#" onClick={this.toggleLines}>
                 {more}
-              </a>
+              </button>
             </div>
           }
           onTruncate={this.handleTruncate}
@@ -55,9 +55,9 @@ class ReadMore extends Component {
         {!truncated && expanded && (
           <div>
             {" "}
-            <a href="#" onClick={this.toggleLines}>
+            <button onClick={this.toggleLines}>
               {less}
-            </a>
+            </button>
           </div>
         )}
       </div>

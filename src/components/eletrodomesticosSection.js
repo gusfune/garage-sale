@@ -14,6 +14,7 @@ export default () => (
         ) {
           edges {
             node {
+              id
               data {
                 Ano
                 Descricao
@@ -26,6 +27,7 @@ export default () => (
                         originalName
                       }
                     }
+                    id
                     url
                   }
                 }
@@ -44,7 +46,7 @@ export default () => (
       <div className="container">
         <div className="row">
           {data.allAirtable.edges.map((node, index) => (
-            <EletrodomesticosUnit content={node.node.data} index={index} />
+            <EletrodomesticosUnit content={node.node.data} index={index} id={node.node.id} key={"unit" + node.node.id} />
           ))}
         </div>
       </div>

@@ -3,7 +3,6 @@ import {
   Badge,
   Card,
   CardHeader,
-  CardText,
   CardBody,
   CardSubtitle,
 } from "reactstrap"
@@ -16,8 +15,8 @@ import Gallery from "./Gallery"
 class EletrodomesticosUnit extends Component {
   render() {
     return (
-      <div className="col-xs-12 col-sm-6 col-md-4" key={this.props.index}>
-        <Card>
+      <div className="col-xs-12 col-sm-6 col-md-4" key={this.props.id}>
+        <Card key={"card" + this.props.id}>
           <CardHeader tag="h4">{this.props.content.Name}</CardHeader>
 
           <Gallery images={this.props.content.Fotos.localFiles} />

@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Lightbox from "react-image-lightbox"
 import { Carousel } from "react-responsive-carousel"
-import { Link } from "gatsby"
 import Img from "gatsby-image"
 import "react-image-lightbox/style.css" // This only needs to be imported once in your app
 
@@ -25,23 +24,25 @@ export default class Gallery extends Component {
     const { photoIndex, isOpen } = this.state
 
     return (
-      <div>
+      <div key={this.index}>
         <Carousel
           infiniteLoop={true}
           showThumbs={false}
           statusFormatter={statusFormatter}
         >
           {this.props.images.map((node, index) => (
-            <Link key={index} onClick={() => this.setState({ photoIndex: index, isOpen: true })} to="#">
+            <button
+              key={node.id}
+              onClick={() => this.setState({ photoIndex: index, isOpen: true })}
+            >
               <Img
                 fixed={node.childImageSharp.fixed}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt={node.childImageSharp.fixed.originalName}
                 className="card-img-top"
-                alt="img"
               />
-            </Link>
+            </button>
           ))}
         </Carousel>
 

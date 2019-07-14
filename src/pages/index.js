@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 import "react-tabs/style/react-tabs.css"
 import ReactModal from "react-modal"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.scss"
 
 import EletrodomesticosSection from "../components/eletrodomesticosSection"
@@ -40,13 +39,13 @@ class IndexPage extends React.Component {
         </p>
         <p>
           Interessado em algo? &nbsp;
-          <Link onClick={this.handleOpenModal}>Clique aqui</Link>, preencha o
+          <button onClick={this.handleOpenModal} to="#">Clique aqui</button>, preencha o
           formulário em um minuto e retornaremos em breve.
         </p>
         <p>
           O catálogo de itens disponíveis está abaixo. Esta parte abaixo é
           apenas um catálogo, caso tenha interesse envie uma mensagem pelo{" "}
-          <Link onClick={this.handleOpenModal}>formulário de contato</Link>, ok?
+          <button onClick={this.handleOpenModal} to="#">formulário de contato</button>, ok?
         </p>
         <ReactModal
           isOpen={this.state.showModal}
@@ -74,21 +73,25 @@ class IndexPage extends React.Component {
             }}
           />
           <p className="close">
-            <Link onClick={this.handleCloseModal}>Fechar [x]</Link>
+            <button onClick={this.handleCloseModal}>Fechar [x]</button>
           </p>
         </ReactModal>
 
         <Tabs>
           <TabList>
-            <Tab>Eletrônicos & Eletrodomésticos</Tab>
-            <Tab disabled={true}>Móveis (em breve)</Tab>
-            <Tab disabled={true}>Diversos (em breve)</Tab>
+            <Tab key="Tab0">Eletrônicos & Eletrodomésticos</Tab>
+            <Tab key="Tab1" disabled={true}>
+              Móveis (em breve)
+            </Tab>
+            <Tab key="Tab2" disabled={true}>
+              Diversos (em breve)
+            </Tab>
           </TabList>
 
-          <TabPanel>
+          <TabPanel key="TabPanel0">
             <EletrodomesticosSection />
           </TabPanel>
-          <TabPanel>
+          <TabPanel key="TabPanel1">
             <h3>Em breve</h3>
             {/*}
             <iframe
@@ -102,7 +105,7 @@ class IndexPage extends React.Component {
             />
             {*/}
           </TabPanel>
-          <TabPanel>
+          <TabPanel key="TabPanel2">
             <h3>Em breve</h3>
             {/*}
             <iframe

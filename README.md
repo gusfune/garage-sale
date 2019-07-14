@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/472f8eac-824d-43a1-ae71-e269b5806bff/deploy-status)](https://app.netlify.com/sites/garage-sale/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

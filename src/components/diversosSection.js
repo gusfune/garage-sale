@@ -47,7 +47,6 @@ export default class DiversosSection extends Component {
         render={data => (
           <div className="container">
             <div className="row">
-              {console.log(data.allAirtable.edges.length)}
               {data.allAirtable.edges.map((node, index) => (
                 <ProductUnit
                   content={node.node.data}

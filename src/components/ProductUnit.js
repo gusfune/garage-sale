@@ -17,13 +17,9 @@ export default class ProductUnit extends Component {
       <div
         className="col-xs-12 col-sm-6 col-md-4 productUnit"
         key={this.props.id}
-        itemScope
-        itemType="http://schema.org/Product"
       >
         <Card key={"card" + this.props.id}>
-          <CardHeader tag="h2" itemProp="name">
-            {this.props.content.Name}
-          </CardHeader>
+          <CardHeader tag="h2">{this.props.content.Name}</CardHeader>
 
           {this.props.content.Fotos && (
             <Gallery images={this.props.content.Fotos.localFiles} />
@@ -51,7 +47,7 @@ export default class ProductUnit extends Component {
               </p>
             )}
             {this.props.content.Modelo && (
-              <p itemProp="model" content={this.props.content.Modelo}>
+              <p content={this.props.content.Modelo}>
                 <strong>Modelo:</strong> {this.props.content.Modelo}
               </p>
             )}
@@ -78,24 +74,8 @@ export default class ProductUnit extends Component {
               </div>
             )}
             {this.props.content.Preco && (
-              <h2
-                className="price"
-                itemProp="offers"
-                itemScope
-                itemType="http://schema.org/Offer"
-              >
-                {/* eslint-disable */}
-                <Badge color="success">
-                  <span itemProp="priceCurrency" content="BRL" />
-                  <span itemProp="price" content={this.props.content.Preco}>
-                    R$ {this.props.content.Preco}
-                  </span>
-                  <link
-                    itemprop="availability"
-                    href="https://schema.org/InStock"
-                  />
-                </Badge>
-                {/* eslint-enable */}
+              <h2 className="price">
+                <Badge color="success">R$ {this.props.content.Preco}</Badge>
               </h2>
             )}
             <p>

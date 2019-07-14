@@ -48,7 +48,6 @@ export default class Gallery extends Component {
                 objectPosition="50% 50%"
                 alt={node.childImageSharp.fixed.originalName}
                 className="card-img-top"
-                itemProp="image"
               />
             </button>
           ))}

@@ -51,7 +51,7 @@ export default class ProductUnit extends Component {
               </p>
             )}
             {this.props.content.Modelo && (
-              <p>
+              <p itemProp="model" content={this.props.content.Modelo}>
                 <strong>Modelo:</strong> {this.props.content.Modelo}
               </p>
             )}
@@ -72,7 +72,7 @@ export default class ProductUnit extends Component {
               </p>
             )}
             {this.props.content.Descricao && (
-              <div itemProp="description">
+              <div>
                 <h3>Mais informações</h3>
                 <ReadMore lines={2}>{this.props.content.Descricao}</ReadMore>
               </div>
@@ -85,14 +85,15 @@ export default class ProductUnit extends Component {
                 itemType="http://schema.org/Offer"
               >
                 {/* eslint-disable */}
-                <Badge
-                  color="success"
-                  itemProp="priceCurrency"
-                  content="BRL"
-                  itemProp="price"
-                  content={this.props.content.Preco}
-                >
-                  R$ {this.props.content.Preco}
+                <Badge color="success">
+                  <span itemProp="priceCurrency" content="BRL" />
+                  <span itemProp="price" content={this.props.content.Preco}>
+                    R$ {this.props.content.Preco}
+                  </span>
+                  <link
+                    itemprop="availability"
+                    href="http://schema.org/InStock"
+                  />
                 </Badge>
                 {/* eslint-enable */}
               </h2>

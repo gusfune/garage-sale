@@ -41,12 +41,12 @@ class ReadMore extends Component {
         <Truncate
           lines={!expanded && lines}
           ellipsis={
-            <div>
+            <span>
               ...{" "}
               <button href="#" onClick={this.toggleLines}>
                 {more}
               </button>
-            </div>
+            </span>
           }
           onTruncate={this.handleTruncate}
         >

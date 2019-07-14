@@ -13,7 +13,7 @@ import ReadMore from "./ReadMore"
 import Gallery from "./Gallery"
 
 
-class EletrodomesticosUnit extends Component {
+export default class EletrodomesticosUnit extends Component {
   render() {
     return (
       <div className="col-xs-12 col-sm-6 col-md-4" key={this.props.id}>
@@ -62,7 +62,7 @@ class EletrodomesticosUnit extends Component {
                 <Badge color="success">R$ {this.props.content.Preco}</Badge>
               </h2>
               <p>
-                <Button color="primary" onClick={this.handleOpenModal}>Tenho interesse</Button>{' '}
+                <Button color="primary" onClick={this.props.modalPass}>Tenho interesse</Button>{' '}
               </p>
           </CardBody>
         </Card>
@@ -70,5 +70,3 @@ class EletrodomesticosUnit extends Component {
     )
   }
 }
-
-export default EletrodomesticosUnit

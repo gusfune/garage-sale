@@ -90,7 +90,7 @@ class IndexPage extends React.Component {
           </TabList>
 
           <TabPanel key="TabPanel0">
-            <EletrodomesticosSection />
+            <EletrodomesticosSection modalPass={this.handleOpenModal} />
           </TabPanel>
           <TabPanel key="TabPanel1">
             <h3>Em breve</h3>

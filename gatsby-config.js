@@ -6,6 +6,7 @@ module.exports = {
     description: `Várias coisas a venda para nossa mudança`,
     author: `@gusfune`,
     url: `https://sale.gusfune.com`,
+    siteUrl: `https://sale.gusfune.com`,
     image: `src/images/android-chrome-192x192.png`,
     twitterUsername: "@gusfune",
   },

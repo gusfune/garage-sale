@@ -2,15 +2,15 @@ import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import ProductUnit from "./ProductUnit"
 
-export default class MoveisSection extends Component {
+export default class DiversosSection extends Component {
   render() {
     return (
       <StaticQuery
         query={graphql`
-          query Moveis {
+          query Diversos {
             allAirtable(
               sort: { order: ASC, fields: data___Name }
-              filter: { table: { eq: "Moveis" } }
+              filter: { table: { eq: "Diversos" } }
             ) {
               edges {
                 node {

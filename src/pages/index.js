@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.scss"
 import EletrodomesticosSection from "../components/eletrodomesticosSection"
 import MoveisSection from "../components/moveisSection"
+import DiversosSection from "../components/diversosSection"
 
 
 class IndexPage extends React.Component {
@@ -84,8 +85,8 @@ class IndexPage extends React.Component {
             <Tab key="Tab1">
               Móveis
             </Tab>
-            <Tab key="Tab2" disabled={true}>
-              Diversos (em breve)
+            <Tab key="Tab2">
+              Diversos
             </Tab>
           </TabList>
 
@@ -96,18 +97,7 @@ class IndexPage extends React.Component {
             <MoveisSection modalPass={this.handleOpenModal} />
           </TabPanel>
           <TabPanel key="TabPanel2">
-            <h3>Em breve</h3>
-            {/*}
-            <iframe
-              className="airtable-embed" 
-              src="https://airtable.com/embed/shrEB5MVwvtWZAhjv?backgroundColor=purple"
-              frameBorder="0"
-              width="100%"
-              height="533"
-              title="diversos"
-              style={{ background: `transparent`, border: `1px solid #ccc` }}
-            />
-            {*/}
+            <DiversosSection modalPass={this.handleOpenModal} />
           </TabPanel>
         </Tabs>
       </Layout>

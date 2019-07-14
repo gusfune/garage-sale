@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.scss"
-import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,12 +24,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Helmet>
-        <meta
-          name="google-site-verification"
-          content="w8TZcdwKe7rbm9SDu-wXKK2MPiFuotcof_Uy_2r5Im4"
-        />
-      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{

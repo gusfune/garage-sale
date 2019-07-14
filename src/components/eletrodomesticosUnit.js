@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import {
   Badge,
+  Button,
   Card,
   CardHeader,
   CardBody,
@@ -17,7 +18,7 @@ class EletrodomesticosUnit extends Component {
     return (
       <div className="col-xs-12 col-sm-6 col-md-4" key={this.props.id}>
         <Card key={"card" + this.props.id}>
-          <CardHeader tag="h4">{this.props.content.Name}</CardHeader>
+          <CardHeader tag="h1">{this.props.content.Name}</CardHeader>
 
           <Gallery images={this.props.content.Fotos.localFiles} />
 
@@ -57,9 +58,12 @@ class EletrodomesticosUnit extends Component {
               {this.props.content.Descricao && (
                 <ReadMore lines={1}>{this.props.content.Descricao}</ReadMore>
               )}
-              <h1>
-                <Badge color="primary">R$ {this.props.content.Preco}</Badge>
-              </h1>
+              <h2 className="price">
+                <Badge color="success">R$ {this.props.content.Preco}</Badge>
+              </h2>
+              <p>
+                <Button color="primary" onClick={this.handleOpenModal}>Tenho interesse</Button>{' '}
+              </p>
           </CardBody>
         </Card>
       </div>

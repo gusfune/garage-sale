@@ -39,13 +39,14 @@ class IndexPage extends React.Component {
         </p>
         <p>
           Interessado em algo? &nbsp;
-          <button onClick={this.handleOpenModal} to="#">Clique aqui</button>, preencha o
-          formulário em um minuto e retornaremos em breve.
+          <button onClick={this.handleOpenModal}>Clique aqui</button>, preencha
+          o formulário em um minuto e retornaremos em breve.
         </p>
         <p>
           O catálogo de itens disponíveis está abaixo. Esta parte abaixo é
           apenas um catálogo, caso tenha interesse envie uma mensagem pelo{" "}
-          <button onClick={this.handleOpenModal} to="#">formulário de contato</button>, ok?
+          <button onClick={this.handleOpenModal}>formulário de contato</button>,
+          ok?
         </p>
         <ReactModal
           isOpen={this.state.showModal}

@@ -26,6 +26,20 @@ a {
   border: none;
   border-radius: unset;
   bottom: 0;
+  background: rebeccapurple;
+  color: white;
+}
+.react-tabs__tab {
+  cursor: pointer;
+}
+.react-tabs__tab-list {
+  margin: 1rem auto;
+}
+.react-tabs__tab--selected {
+  font-weight: 700;
+}
+.react-tabs__tab--disabled {
+  cursor: not-allowed;
 }
 .react-tabs__tab-panel {
   min-height: 100vh;

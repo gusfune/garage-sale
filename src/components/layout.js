@@ -8,9 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import Header from "./header"
 import "./layout.scss"
+import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,9 +26,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap"
-          rel="stylesheet"
+        <meta
+          name="google-site-verification"
+          content="w8TZcdwKe7rbm9SDu-wXKK2MPiFuotcof_Uy_2r5Im4"
         />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         }}
       >
         <p>
-          Made with{" "}
+          Feito com{" "}
           <a
             href="https://gatsbyjs.org"
             rel="noopener noreferrer"
@@ -59,13 +59,13 @@ const Layout = ({ children }) => {
           >
             GatsbyJS
           </a>{" "}
-          and{" "}
+          e{" "}
           <a
             href="https://github.com/gusfune/garage-sale"
             rel="noopener noreferrer"
             target="_blank"
           >
-            available open source.
+            disponível Open Source.
           </a>
         </p>
       </footer>

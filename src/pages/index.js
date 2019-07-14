@@ -1,12 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-import "react-tabs/style/react-tabs.css"
 import ReactModal from "react-modal"
-import "./index.scss"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "react-tabs/style/react-tabs.css"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./index.scss"
+import EletrodomesticosSection from "../components/eletrodomesticosSection"
+import MoveisSection from "../components/moveisSection"
+import DiversosSection from "../components/diversosSection"
+
 
 class IndexPage extends React.Component {
   constructor() {
@@ -37,16 +40,20 @@ class IndexPage extends React.Component {
         </p>
         <p>
           Interessado em algo? &nbsp;
-          <Link onClick={this.handleOpenModal}>Clique aqui</Link>, preencha o
-          formulário em um minuto e retornaremos em breve.
+          <button onClick={this.handleOpenModal}>Clique aqui</button>, preencha
+          o formulário em um minuto e retornaremos em breve.
         </p>
         <p>
           O catálogo de itens disponíveis está abaixo. Esta parte abaixo é
           apenas um catálogo, caso tenha interesse envie uma mensagem pelo{" "}
-          <Link onClick={this.handleOpenModal}>formulário de contato</Link>, ok?
+          <button onClick={this.handleOpenModal}>formulário de contato</button>,
+          ok?
         </p>
         <ReactModal
           isOpen={this.state.showModal}
+          contentLabel="Fechar Janela"
+          shouldCloseOnOverlayClick={true}
+          onRequestClose={this.handleCloseModal}
           style={{
             overlay: {
               background: `rgba(0, 0, 0, 0.8)`,
@@ -71,59 +78,29 @@ class IndexPage extends React.Component {
             }}
           />
           <p className="close">
-            <Link onClick={this.handleCloseModal}>Fechar [x]</Link>
+            <button onClick={this.handleCloseModal} aria-label="fechar janela">Fechar [x]</button>
           </p>
         </ReactModal>
 
         <Tabs>
           <TabList>
-            <Tab>Eletrônicos & Eletrodomésticos</Tab>
-            <Tab disabled="true">Móveis (em breve)</Tab>
-            <Tab disabled="true">Diversos (em breve)</Tab>
+            <Tab key="Tab0">Eletrônicos & Eletrodomésticos</Tab>
+            <Tab key="Tab1">
+              Móveis
+            </Tab>
+            <Tab key="Tab2">
+              Diversos
+            </Tab>
           </TabList>
 
-          <TabPanel>
-            <iframe
-              className="airtable-embed"
-              src="https://airtable.com/embed/shrHykWNSJy1HhZQS?backgroundColor=purple"
-              frameBorder="0"
-              width="100%"
-              height="533"
-              title="eletronicos"
-              style={{
-                background: `transparent`,
-                border: `1px solid #ccc`,
-                "min-height": `100vh`,
-              }}
-            />
+          <TabPanel key="TabPanel0">
+            <EletrodomesticosSection modalPass={this.handleOpenModal} />
           </TabPanel>
-          <TabPanel>
-            <h3>Em breve</h3>
-            {/*}
-            <iframe
-              className="airtable-embed" 
-              src="https://airtable.com/embed/shrPQlNvbmpGXAEeM?backgroundColor=purple"
-              frameborder="0"
-              width="100%"
-              height="533"
-              title="moveis"
-              style={{ background: `transparent`, border: `1px solid #ccc` }}
-            />
-            {*/}
+          <TabPanel key="TabPanel1">
+            <MoveisSection modalPass={this.handleOpenModal} />
           </TabPanel>
-          <TabPanel>
-            <h3>Em breve</h3>
-            {/*}
-            <iframe
-              className="airtable-embed" 
-              src="https://airtable.com/embed/shrEB5MVwvtWZAhjv?backgroundColor=purple"
-              frameBorder="0"
-              width="100%"
-              height="533"
-              title="diversos"
-              style={{ background: `transparent`, border: `1px solid #ccc` }}
-            />
-            {*/}
+          <TabPanel key="TabPanel2">
+            <DiversosSection modalPass={this.handleOpenModal} />
           </TabPanel>
         </Tabs>
       </Layout>

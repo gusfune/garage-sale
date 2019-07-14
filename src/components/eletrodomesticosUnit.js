@@ -7,16 +7,33 @@ import {
   CardBody,
   CardSubtitle,
 } from "reactstrap"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { Carousel } from "react-responsive-carousel"
+import "./eletrodomesticosUnit.scss"
+
+const statusFormatter = (current, total) => (
+  <div>
+    {current} de {total}
+  </div>
+)
 
 class EletrodomesticosUnit extends Component {
   render() {
     return (
-      <div className="col-sm-4">
+      <div className="col-xs-12 col-sm-4">
         <Card key={this.props.index}>
           <CardHeader tag="h4">{this.props.content.Name}</CardHeader>
-          {this.props.content.fileNode.map(node => (
-            <img src={node.url} className="card-img-top" alt="img" />
-          ))}
+          <Carousel
+            infiniteLoop={true}
+            showThumbs={false}
+            statusFormatter={statusFormatter}
+          >
+            {this.props.content.fileNode.map(node => (
+              <div>
+                <img src={node.url} className="card-img-top" alt="img" />
+              </div>
+            ))}
+          </Carousel>
 
           <CardBody>
             {this.props.content.Marca && (

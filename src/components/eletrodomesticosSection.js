@@ -21,6 +21,11 @@ export default () => (
                 fileNode {
                   filename
                   url
+                  thumbnails {
+                    large {
+                      url
+                    }
+                  }
                 }
                 Marca
                 Modelo

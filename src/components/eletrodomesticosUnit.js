@@ -31,7 +31,7 @@ class EletrodomesticosUnit extends Component {
           >
             {this.props.content.fileNode.map(node => (
               <div>
-                <img src={node.url} className="card-img-top" alt="img" />
+                <img src={node.thumbnails.large.url} className="card-img-top" alt="img" />
               </div>
             ))}
           </Carousel>

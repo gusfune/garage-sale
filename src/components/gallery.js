@@ -49,9 +49,10 @@ export default class Gallery extends Component {
 
         {isOpen && (
           <Lightbox
-            mainSrc={this.props.images[photoIndex].url}
+            mainSrc={this.props.images[photoIndex].childImageSharp.fluid.src}
             nextSrc={
-              this.props.images[(photoIndex + 1) % this.props.images.length].url
+              this.props.images[(photoIndex + 1) % this.props.images.length]
+                .childImageSharp.fluid.src
             }
             prevSrc={
               this.props.images[

@@ -29,6 +29,9 @@ export default class EletrodomesticosSection extends Component {
                             ...GatsbyImageSharpFixed
                             originalName
                           }
+                          fluid {
+                            ...GatsbyImageSharpFluid
+                          }
                         }
                         id
                         url

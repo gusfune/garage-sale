@@ -10,7 +10,7 @@ import {
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "./eletrodomesticosUnit.scss"
 import ReadMore from "./ReadMore"
-import Gallery from "./Gallery"
+import Gallery from "./gallery"
 
 export default class EletrodomesticosUnit extends Component {
   render() {

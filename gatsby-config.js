@@ -69,6 +69,12 @@ module.exports = {
       options: {
         cachePublic: true,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`open sans\:400,700`],
+      },
+    },
   ],
 }

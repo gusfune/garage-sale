@@ -85,13 +85,13 @@ export default class ProductUnit extends Component {
                 itemType="http://schema.org/Offer"
               >
                 {/* eslint-disable */}
-                <Badge color="success">
+                <Badge color="primary">
                   <span itemProp="priceCurrency" content="BRL" />
                   <span itemProp="price" content={this.props.content.Preco}>
                     R$ {this.props.content.Preco}
                   </span>
                   <link
-                    itemprop="availability"
+                    itemProp="availability"
                     href="https://schema.org/InStock"
                   />
                 </Badge>
@@ -100,7 +100,7 @@ export default class ProductUnit extends Component {
             )}
             <p>
               <Button
-                color="primary"
+                color="danger"
                 onClick={this.props.modalPass}
                 id={"interest_" + this.props.id}
                 aria-label="Tenho Interesse"

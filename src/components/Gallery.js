@@ -84,6 +84,8 @@ export default class Gallery extends Component {
                 photoIndex: (photoIndex + 1) % this.props.images.length,
               })
             }
+            nextLabel="Próxima Imagem"
+            prevLabel="Imagem Anterior"
           />
         )}
       </div>

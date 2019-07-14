@@ -12,6 +12,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -58,8 +59,14 @@ module.exports = {
             baseId: process.env.AIRTABLE_BASE_ID,
             tableName: `Diversos`,
             mapping: { Fotos: `fileNode` },
-          }
+          },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -7,7 +7,6 @@ import {
   CardBody,
   CardSubtitle,
 } from "reactstrap"
-import Img from "gatsby-image"
 import ReadMore from "./ReadMore"
 import Gallery from "./Gallery"
 import "./ProductUnit.scss"
@@ -27,11 +26,11 @@ export default class ProductUnit extends Component {
           )}
           {!this.props.content.Fotos && (
             <img
-                src="https://via.placeholder.com/550x400.png?text=Foto+em+breve"
-                alt="Em breve"
-                className="card-img-top"
-                width="100%"
-                height="200"
+              src="https://via.placeholder.com/550x400.png?text=Foto+em+breve"
+              alt="Em breve"
+              className="card-img-top"
+              width="100%"
+              height="200"
             />
           )}
 
@@ -75,12 +74,16 @@ export default class ProductUnit extends Component {
               </div>
             )}
             {this.props.content.Preco && (
-            <h2 className="price">
-              <Badge color="success">R$ {this.props.content.Preco}</Badge>
-            </h2>
+              <h2 className="price">
+                <Badge color="success">R$ {this.props.content.Preco}</Badge>
+              </h2>
             )}
             <p>
-              <Button color="primary" onClick={this.props.modalPass}>
+              <Button
+                color="primary"
+                onClick={this.props.modalPass}
+                aria-label="Tenho Interesse"
+              >
                 Tenho interesse
               </Button>{" "}
             </p>

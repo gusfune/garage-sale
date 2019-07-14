@@ -38,6 +38,7 @@ export default class Gallery extends Component {
             <button
               key={node.id}
               className="openGallery"
+              aria-label="Abrir Imagem"
               onClick={() => this.setState({ photoIndex: index, isOpen: true })}
             >
               <Img

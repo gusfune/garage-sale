@@ -35,7 +35,8 @@ class EletrodomesticosUnit extends Component {
               <div>
                 <Img
                   fixed={node.childImageSharp.fixed}
-
+                  objectFit="cover"
+                  objectPosition="50% 50%"
                   alt={node.childImageSharp.fixed.originalName}
                   className="card-img-top"
                   alt="img"

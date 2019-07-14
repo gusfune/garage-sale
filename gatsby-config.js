@@ -38,11 +38,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
-    },
+        id: process.env.GOOGLE_TAGMANAGER_ID
+      }
+    }
     {
       resolve: `gatsby-source-airtable`,
       options: {

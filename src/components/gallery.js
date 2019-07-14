@@ -32,10 +32,12 @@ export default class Gallery extends Component {
           showThumbs={false}
           showIndicators={this.props.images.length < 2 ? false : true}
           statusFormatter={statusFormatter}
+          dynamicHeight={true}
         >
           {this.props.images.map((node, index) => (
             <button
               key={node.id}
+              className="openGallery"
               onClick={() => this.setState({ photoIndex: index, isOpen: true })}
             >
               <Img

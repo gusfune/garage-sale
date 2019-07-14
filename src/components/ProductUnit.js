@@ -14,7 +14,10 @@ import "./ProductUnit.scss"
 export default class ProductUnit extends Component {
   render() {
     return (
-      <div className="col-xs-12 col-sm-6 col-md-4" key={this.props.id}>
+      <div
+        className="col-xs-12 col-sm-6 col-md-4 productUnit"
+        key={this.props.id}
+      >
         <Card key={"card" + this.props.id}>
           <CardHeader tag="h1">{this.props.content.Name}</CardHeader>
 

@@ -25,7 +25,7 @@ export default class EletrodomesticosSection extends Component {
                     Fotos {
                       localFiles {
                         childImageSharp {
-                          fixed(width: 400, height: 300) {
+                          fixed(width: 400, height: 250) {
                             ...GatsbyImageSharpFixed
                             originalName
                           }

@@ -1,25 +1,34 @@
-h1 {
-  font-size: 1.2rem;
-}
-h3 {
-  font-size: 1rem;
-  margin: 1rem 0 .5rem;
-}
-h5 {
-  font-size: 1rem;
-}
-p {
-  font-size: 0.8rem;
-  margin-bottom: 0.2rem;
-  white-space: pre-line;
-}
-.readmore {
-  font-size: 0.7rem;
-  white-space: pre-line;
-}
-.price {
-  margin-top: 1rem;
-}
-.btn-primary {
-  text-decoration: none;
+.productUnit {
+  h1 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    white-space: pre-line;
+  }
+  .readmore {
+    font-size: 0.7rem;
+    white-space: pre-line;
+  }
+  .price {
+    margin-top: 1rem;
+  }
+  .btn-primary {
+    text-decoration: none;
+  }
+  .openGallery {
+    width: 100%;
+    display: block;
+    .card-img-top {
+      max-width: 100%;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { Alert } from "reactstrap"
 import ProductUnit from "./ProductUnit"
 import Soon from "./Soon"
 
@@ -62,6 +63,12 @@ export default class EletrodomesticosSection extends Component {
                 />
               ))}
               {data.allAirtable.edges.length === 0 && <Soon />}
+            </div>
+            <div className="row">
+              <div className="col-12 text-center">
+                <br />
+                <Alert color="primary">Em breve mais itens disponíveis!</Alert>
+              </div>
             </div>
           </div>
         )}

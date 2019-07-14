@@ -45,8 +45,12 @@ class IndexPage extends React.Component {
           , preencha o formulário em um minuto e retornaremos em breve.
         </p>
         <p>
-          O catálogo de itens disponíveis está abaixo. Esta parte abaixo é
-          apenas um catálogo, caso tenha interesse envie uma mensagem pelo{" "}
+          📷 A qualidade das fotos não estão boas devido a correria, caso queira
+          mais fotos de algum produto é só avisar.
+        </p>
+        <p>
+          O catálogo de itens disponíveis está abaixo, caso tenha interesse
+          envie uma mensagem pelo{" "}
           <button onClick={this.handleOpenModal} id="secondLink">
             formulário de contato
           </button>

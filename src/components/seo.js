@@ -52,11 +52,23 @@ function SEO({ description, lang, meta, title, url }) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.url}/${coverImage}`
+          content: `${site.siteMetadata.url}/${coverImage}`,
+        },
+        {
+          property: `og:image:width`,
+          content: `634`,
+        },
+        {
+          property: `og:image:height`,
+          content: `418`,
+        },
+        {
+          property: `og:image:type`,
+          content: `image/jpeg`,
         },
         {
           property: `og:url`,
-          content: `${site.siteMetadata.url}${'/'}`,
+          content: `${site.siteMetadata.url}${"/"}`,
         },
         {
           property: `og:type`,
@@ -87,7 +99,7 @@ SEO.defaultProps = {
   lang: `pt`,
   meta: [],
   description: ``,
-  image: null
+  image: null,
 }
 
 SEO.propTypes = {
@@ -95,7 +107,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  image: PropTypes.string
+  image: PropTypes.string,
 }
 
 export default SEO

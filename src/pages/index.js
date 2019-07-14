@@ -45,7 +45,10 @@ class IndexPage extends React.Component {
           , preencha o formulário em um minuto e retornaremos em breve.
         </p>
         <p>
-          📷 A qualidade das fotos não estão boas devido a correria, caso queira
+          <span role="img" aria-label="camera">
+            📷
+          </span>{" "}
+          A qualidade das fotos não estão boas devido a correria, caso queira
           mais fotos de algum produto é só avisar.
         </p>
         <p>

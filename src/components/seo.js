@@ -55,19 +55,35 @@ function SEO({ description, lang, meta, title, url }) {
           content: `${site.siteMetadata.url}/${coverImage}`,
         },
         {
+          property: `og:image:url`,
+          content: `${site.siteMetadata.url}/${coverImage}`,
+        },
+        {
+          property: `og:image:secure_url`,
+          content: `${site.siteMetadata.url}/${coverImage}`,
+        },
+        {
           property: `og:image:width`,
-          content: `634`,
+          content: `1024`,
         },
         {
           property: `og:image:height`,
-          content: `418`,
+          content: `615`,
         },
         {
           property: `og:image:type`,
           content: `image/jpeg`,
         },
         {
+          property: `og:image:alt`,
+          content: `A panda sitting on an airplane seat`,
+        },
+        {
           property: `og:url`,
+          content: `${site.siteMetadata.url}${"/"}`,
+        },
+        {
+          property: `og:secure_url`,
           content: `${site.siteMetadata.url}${"/"}`,
         },
         {

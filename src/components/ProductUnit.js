@@ -20,7 +20,7 @@ export default class ProductUnit extends Component {
         key={this.props.id}
       >
         <Card key={"card" + this.props.id}>
-          <CardHeader tag="h1">{this.props.content.Name}</CardHeader>
+          <CardHeader tag="h2">{this.props.content.Name}</CardHeader>
 
           {this.props.content.Fotos && (
             <Gallery images={this.props.content.Fotos.localFiles} />

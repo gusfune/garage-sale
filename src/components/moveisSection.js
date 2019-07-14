@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import ProductUnit from "./ProductUnit"
+import Soon from "./Soon"
 
 export default class MoveisSection extends Component {
   render() {
@@ -10,7 +11,10 @@ export default class MoveisSection extends Component {
           query Moveis {
             allAirtable(
               sort: { order: ASC, fields: data___Name }
-              filter: { table: { eq: "Moveis" } }
+              filter: {
+                table: { eq: "Moveis" }
+                data: { O_que_fazer: { eq: "A Venda" } }
+              }
             ) {
               edges {
                 node {
@@ -52,6 +56,7 @@ export default class MoveisSection extends Component {
                   modalPass={this.props.modalPass}
                 />
               ))}
+              {data.allAirtable.edges.length === 0 && <Soon />}
             </div>
           </div>
         )}

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import ProductUnit from "./ProductUnit"
+import Soon from "./Soon"
 
 export default class EletrodomesticosSection extends Component {
   render() {
@@ -60,6 +61,7 @@ export default class EletrodomesticosSection extends Component {
                   modalPass={this.props.modalPass}
                 />
               ))}
+              {data.allAirtable.edges.length === 0 && <Soon />}
             </div>
           </div>
         )}

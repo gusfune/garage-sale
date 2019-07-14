@@ -13,6 +13,7 @@ export default class EletrodomesticosSection extends Component {
                 table: { eq: "Eletrodomesticos" }
                 data: { O_que_fazer: { eq: "A Venda" } }
               }
+              sort: { order: ASC, fields: data___Name }
             ) {
               edges {
                 node {

@@ -18,12 +18,13 @@ export default () => (
                 Ano
                 Descricao
                 Especificacoes
-                fileNode {
-                  filename
-                  url
-                  thumbnails {
-                    large {
-                      url
+                Fotos {
+                  localFiles {
+                    childImageSharp {
+                      fixed(width: 400, height: 300) {
+                        ...GatsbyImageSharpFixed
+                        originalName
+                      }
                     }
                   }
                 }

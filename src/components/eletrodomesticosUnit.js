@@ -9,6 +9,7 @@ import {
 } from "reactstrap"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
+import Img from "gatsby-image"
 import "./eletrodomesticosUnit.scss"
 import ReadMore from "./ReadMore"
 
@@ -24,14 +25,21 @@ class EletrodomesticosUnit extends Component {
       <div className="col-xs-12 col-sm-6 col-md-4">
         <Card key={this.props.index}>
           <CardHeader tag="h4">{this.props.content.Name}</CardHeader>
+
           <Carousel
             infiniteLoop={true}
             showThumbs={false}
             statusFormatter={statusFormatter}
           >
-            {this.props.content.fileNode.map(node => (
+            {this.props.content.Fotos.localFiles.map(node => (
               <div>
-                <img src={node.thumbnails.large.url} className="card-img-top" alt="img" />
+                <Img
+                  fixed={node.childImageSharp.fixed}
+
+                  alt={node.childImageSharp.fixed.originalName}
+                  className="card-img-top"
+                  alt="img"
+                />
               </div>
             ))}
           </Carousel>
@@ -70,11 +78,7 @@ class EletrodomesticosUnit extends Component {
                 </p>
               )}
               {this.props.content.Descricao && (
-                <ReadMore
-                  lines={1}
-                >
-                  {this.props.content.Descricao}
-                </ReadMore>
+                <ReadMore lines={1}>{this.props.content.Descricao}</ReadMore>
               )}
               <h1>
                 <Badge color="primary">R$ {this.props.content.Preco}</Badge>

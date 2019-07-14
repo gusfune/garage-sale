@@ -10,6 +10,7 @@ import {
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 import "./eletrodomesticosUnit.scss"
+import ReadMore from "./ReadMore"
 
 const statusFormatter = (current, total) => (
   <div>
@@ -20,7 +21,7 @@ const statusFormatter = (current, total) => (
 class EletrodomesticosUnit extends Component {
   render() {
     return (
-      <div className="col-xs-12 col-sm-4">
+      <div className="col-xs-12 col-sm-6 col-md-4">
         <Card key={this.props.index}>
           <CardHeader tag="h4">{this.props.content.Name}</CardHeader>
           <Carousel
@@ -69,7 +70,11 @@ class EletrodomesticosUnit extends Component {
                 </p>
               )}
               {this.props.content.Descricao && (
-                <p>{this.props.content.Descricao}</p>
+                <ReadMore
+                  lines={1}
+                >
+                  {this.props.content.Descricao}
+                </ReadMore>
               )}
               <h1>
                 <Badge color="primary">R$ {this.props.content.Preco}</Badge>

@@ -51,6 +51,9 @@ class IndexPage extends React.Component {
         </p>
         <ReactModal
           isOpen={this.state.showModal}
+          contentLabel="Fechar Janela"
+          shouldCloseOnOverlayClick={true}
+          onRequestClose={this.handleCloseModal}
           style={{
             overlay: {
               background: `rgba(0, 0, 0, 0.8)`,
@@ -75,7 +78,7 @@ class IndexPage extends React.Component {
             }}
           />
           <p className="close">
-            <button onClick={this.handleCloseModal}>Fechar [x]</button>
+            <button onClick={this.handleCloseModal} aria-label="fechar janela">Fechar [x]</button>
           </p>
         </ReactModal>
 

@@ -12,9 +12,10 @@ a {
 }
 .close {
   position: absolute;
-  top: 0;
+  top: .5rem;
   right: 1rem;
   color: rebeccapurple;
+  font-size: 1rem;
   a {
     text-decoration: none;
     color: inherit;

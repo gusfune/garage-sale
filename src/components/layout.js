@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import Header from "./header"
 import "./layout.scss"
 
@@ -53,7 +52,7 @@ const Layout = ({ children }) => {
           >
             GatsbyJS
           </a>{" "}
-          and{" "}
+          e{" "}
           <a
             href="https://github.com/gusfune/garage-sale"
             rel="noopener noreferrer"

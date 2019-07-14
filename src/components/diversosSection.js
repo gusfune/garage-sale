@@ -23,6 +23,7 @@ export default class DiversosSection extends Component {
                   data {
                     Name
                     Descricao
+                    Slug
                     Fotos {
                       localFiles {
                         childImageSharp {

@@ -23,6 +23,7 @@ export default class MoveisSection extends Component {
                   data {
                     Name
                     Descricao
+                    Slug
                     Fotos {
                       localFiles {
                         childImageSharp {

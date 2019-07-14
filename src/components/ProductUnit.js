@@ -20,13 +20,16 @@ export default class ProductUnit extends Component {
         itemScope
         itemType="http://schema.org/Product"
       >
-        <Card key={"card" + this.props.id}>
+        <Card key={this.props.content.Slug} id={this.props.content.Slug}>
           <CardHeader tag="h2" itemProp="name">
             {this.props.content.Name}
           </CardHeader>
 
           {this.props.content.Fotos && (
-            <Gallery images={this.props.content.Fotos.localFiles} />
+            <Gallery
+              images={this.props.content.Fotos.localFiles}
+              slug={this.props.content.Slug}
+            />
           )}
           {!this.props.content.Fotos && (
             <img
@@ -102,7 +105,7 @@ export default class ProductUnit extends Component {
               <Button
                 color="danger"
                 onClick={this.props.modalPass}
-                id={"interest_" + this.props.id}
+                id={"interest_" + this.props.content.Slug}
                 aria-label="Tenho Interesse"
               >
                 Tenho interesse

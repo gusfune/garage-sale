@@ -44,6 +44,7 @@ export default class EletrodomesticosSection extends Component {
                     Modelo
                     Name
                     Preco
+                    Slug
                     Voltagem
                   }
                 }

@@ -12,7 +12,7 @@ a {
 }
 .close {
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 1rem;
   color: rebeccapurple;
   font-size: 1rem;
@@ -41,9 +41,6 @@ a {
 }
 .react-tabs__tab--disabled {
   cursor: not-allowed;
-}
-.react-tabs__tab-panel {
-  min-height: 100vh;
 }
 h3 {
   margin: 2rem auto;

@@ -82,6 +82,7 @@ export default class ProductUnit extends Component {
               <Button
                 color="primary"
                 onClick={this.props.modalPass}
+                id={"interest_" + this.props.id}
                 aria-label="Tenho Interesse"
               >
                 Tenho interesse

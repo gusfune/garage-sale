@@ -37,6 +37,7 @@ export default class Gallery extends Component {
           {this.props.images.map((node, index) => (
             <button
               key={node.id}
+              id={"gallery_" + node.id}
               className="openGallery"
               aria-label="Abrir Imagem"
               onClick={() => this.setState({ photoIndex: index, isOpen: true })}

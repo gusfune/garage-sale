@@ -10,7 +10,6 @@ import EletrodomesticosSection from "../components/eletrodomesticosSection"
 import MoveisSection from "../components/moveisSection"
 import DiversosSection from "../components/diversosSection"
 
-
 class IndexPage extends React.Component {
   constructor() {
     super()
@@ -40,14 +39,18 @@ class IndexPage extends React.Component {
         </p>
         <p>
           Interessado em algo? &nbsp;
-          <button onClick={this.handleOpenModal}>Clique aqui</button>, preencha
-          o formulário em um minuto e retornaremos em breve.
+          <button onClick={this.handleOpenModal} id="firstLink">
+            Clique aqui
+          </button>
+          , preencha o formulário em um minuto e retornaremos em breve.
         </p>
         <p>
           O catálogo de itens disponíveis está abaixo. Esta parte abaixo é
           apenas um catálogo, caso tenha interesse envie uma mensagem pelo{" "}
-          <button onClick={this.handleOpenModal}>formulário de contato</button>,
-          ok?
+          <button onClick={this.handleOpenModal} id="secondLink">
+            formulário de contato
+          </button>
+          , ok?
         </p>
         <ReactModal
           isOpen={this.state.showModal}
@@ -78,19 +81,17 @@ class IndexPage extends React.Component {
             }}
           />
           <p className="close">
-            <button onClick={this.handleCloseModal} aria-label="fechar janela">Fechar [x]</button>
+            <button onClick={this.handleCloseModal} aria-label="fechar janela">
+              Fechar [x]
+            </button>
           </p>
         </ReactModal>
 
         <Tabs>
           <TabList>
             <Tab key="Tab0">Eletrônicos & Eletrodomésticos</Tab>
-            <Tab key="Tab1">
-              Móveis
-            </Tab>
-            <Tab key="Tab2">
-              Diversos
-            </Tab>
+            <Tab key="Tab1">Móveis</Tab>
+            <Tab key="Tab2">Diversos</Tab>
           </TabList>
 
           <TabPanel key="TabPanel0">

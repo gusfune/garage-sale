@@ -26,6 +26,7 @@ export default () => (
                         originalName
                       }
                     }
+                    url
                   }
                 }
                 Marca

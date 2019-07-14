@@ -8,42 +8,19 @@ import {
   CardSubtitle,
 } from "reactstrap"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
-import { Carousel } from "react-responsive-carousel"
-import Img from "gatsby-image"
 import "./eletrodomesticosUnit.scss"
 import ReadMore from "./ReadMore"
+import Gallery from "./Gallery"
 
-const statusFormatter = (current, total) => (
-  <div>
-    {current} de {total}
-  </div>
-)
 
 class EletrodomesticosUnit extends Component {
   render() {
     return (
-      <div className="col-xs-12 col-sm-6 col-md-4">
-        <Card key={this.props.index}>
+      <div className="col-xs-12 col-sm-6 col-md-4" key={this.props.index}>
+        <Card>
           <CardHeader tag="h4">{this.props.content.Name}</CardHeader>
 
-          <Carousel
-            infiniteLoop={true}
-            showThumbs={false}
-            statusFormatter={statusFormatter}
-          >
-            {this.props.content.Fotos.localFiles.map(node => (
-              <div>
-                <Img
-                  fixed={node.childImageSharp.fixed}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={node.childImageSharp.fixed.originalName}
-                  className="card-img-top"
-                  alt="img"
-                />
-              </div>
-            ))}
-          </Carousel>
+          <Gallery images={this.props.content.Fotos.localFiles} />
 
           <CardBody>
             {this.props.content.Marca && (
@@ -51,7 +28,7 @@ class EletrodomesticosUnit extends Component {
                 <h5>{this.props.content.Marca}</h5>
               </CardSubtitle>
             )}
-            <CardText>
+
               {this.props.content.Ano && (
                 <p>
                   <strong>Ano:</strong> {this.props.content.Ano}
@@ -84,7 +61,6 @@ class EletrodomesticosUnit extends Component {
               <h1>
                 <Badge color="primary">R$ {this.props.content.Preco}</Badge>
               </h1>
-            </CardText>
           </CardBody>
         </Card>
       </div>

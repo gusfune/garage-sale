@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         }}
       >
         <p>
-          Made with{" "}
+          Feito com{" "}
           <a
             href="https://gatsbyjs.org"
             rel="noopener noreferrer"
@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            available open source.
+            disponível Open Source.
           </a>
         </p>
       </footer>

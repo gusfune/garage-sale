@@ -27,7 +27,6 @@ export default class Gallery extends Component {
 
     return (
       <div key={this.index}>
-        {console.log(this.props.images.length)}
         <Carousel
           infiniteLoop={true}
           showThumbs={false}

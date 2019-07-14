@@ -7,10 +7,9 @@ import {
   CardBody,
   CardSubtitle,
 } from "reactstrap"
-import "react-responsive-carousel/lib/styles/carousel.min.css"
-import "./eletrodomesticosUnit.scss"
 import ReadMore from "./ReadMore"
-import Gallery from "./gallery"
+import Gallery from "./Gallery"
+import "./eletrodomesticosUnit.scss"
 
 export default class EletrodomesticosUnit extends Component {
   render() {
@@ -57,7 +56,7 @@ export default class EletrodomesticosUnit extends Component {
             {this.props.content.Descricao && (
               <div>
                 <h3>Mais informações</h3>
-                <ReadMore lines={1}>{this.props.content.Descricao}</ReadMore>
+                <ReadMore lines={2}>{this.props.content.Descricao}</ReadMore>
               </div>
             )}
             <h2 className="price">

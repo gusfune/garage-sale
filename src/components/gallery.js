@@ -1,8 +1,9 @@
 import React, { Component } from "react"
-import Lightbox from "react-image-lightbox"
-import { Carousel } from "react-responsive-carousel"
 import Img from "gatsby-image"
-import "react-image-lightbox/style.css" // This only needs to be imported once in your app
+import { Carousel } from "react-responsive-carousel"
+import Lightbox from "react-image-lightbox"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import "react-image-lightbox/style.css"
 
 const statusFormatter = (current, total) => (
   <span>

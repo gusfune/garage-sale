@@ -1,14 +1,12 @@
 import React from "react"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-import "react-tabs/style/react-tabs.css"
 import ReactModal from "react-modal"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./index.scss"
-
-import EletrodomesticosSection from "../components/eletrodomesticosSection"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "react-tabs/style/react-tabs.css"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./index.scss"
+import EletrodomesticosSection from "../components/eletrodomesticosSection"
 
 class IndexPage extends React.Component {
   constructor() {

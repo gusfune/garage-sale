@@ -17,9 +17,13 @@ export default class ProductUnit extends Component {
       <div
         className="col-xs-12 col-sm-6 col-md-4 productUnit"
         key={this.props.id}
+        itemscope
+        itemtype="http://schema.org/Product"
       >
         <Card key={"card" + this.props.id}>
-          <CardHeader tag="h2">{this.props.content.Name}</CardHeader>
+          <CardHeader tag="h2" itemprop="name">
+            {this.props.content.Name}
+          </CardHeader>
 
           {this.props.content.Fotos && (
             <Gallery images={this.props.content.Fotos.localFiles} />
@@ -68,14 +72,29 @@ export default class ProductUnit extends Component {
               </p>
             )}
             {this.props.content.Descricao && (
-              <div>
+              <div itemprop="description">
                 <h3>Mais informações</h3>
                 <ReadMore lines={2}>{this.props.content.Descricao}</ReadMore>
               </div>
             )}
             {this.props.content.Preco && (
-              <h2 className="price">
-                <Badge color="success">R$ {this.props.content.Preco}</Badge>
+              <h2
+                className="price"
+                itemprop="offers"
+                itemscope
+                itemtype="http://schema.org/Offer"
+              >
+                <Badge
+                  color="success"
+                  itemprop="priceCurrency"
+                  content="BRL"
+                  itemprop="price"
+                  content={this.props.content.Preco}
+                  itemprop="availability"
+                  href="http://schema.org/InStock"
+                >
+                  R$ {this.props.content.Preco}
+                </Badge>
               </h2>
             )}
             <p>

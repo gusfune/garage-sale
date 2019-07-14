@@ -12,7 +12,6 @@ import "./eletrodomesticosUnit.scss"
 import ReadMore from "./ReadMore"
 import Gallery from "./Gallery"
 
-
 export default class EletrodomesticosUnit extends Component {
   render() {
     return (
@@ -29,41 +28,46 @@ export default class EletrodomesticosUnit extends Component {
               </CardSubtitle>
             )}
 
-              {this.props.content.Ano && (
-                <p>
-                  <strong>Ano:</strong> {this.props.content.Ano}
-                </p>
-              )}
-              {this.props.content.Modelo && (
-                <p>
-                  <strong>Modelo:</strong> {this.props.content.Modelo}
-                </p>
-              )}
-              {this.props.content.Especificacoes && (
-                <p>
-                  <a
-                    href={this.props.content.Especificacoes}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Especificações Técnicas
-                  </a>
-                </p>
-              )}
-              {this.props.content.Voltagem && (
-                <p>
-                  <strong>Voltagem:</strong> {this.props.content.Voltagem}
-                </p>
-              )}
-              {this.props.content.Descricao && (
-                <ReadMore lines={1}>{this.props.content.Descricao}</ReadMore>
-              )}
-              <h2 className="price">
-                <Badge color="success">R$ {this.props.content.Preco}</Badge>
-              </h2>
+            {this.props.content.Ano && (
               <p>
-                <Button color="primary" onClick={this.props.modalPass}>Tenho interesse</Button>{' '}
+                <strong>Ano:</strong> {this.props.content.Ano}
               </p>
+            )}
+            {this.props.content.Modelo && (
+              <p>
+                <strong>Modelo:</strong> {this.props.content.Modelo}
+              </p>
+            )}
+            {this.props.content.Especificacoes && (
+              <p>
+                <a
+                  href={this.props.content.Especificacoes}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Especificações Técnicas
+                </a>
+              </p>
+            )}
+            {this.props.content.Voltagem && (
+              <p>
+                <strong>Voltagem:</strong> {this.props.content.Voltagem}
+              </p>
+            )}
+            {this.props.content.Descricao && (
+              <div>
+                <h3>Mais informações</h3>
+                <ReadMore lines={1}>{this.props.content.Descricao}</ReadMore>
+              </div>
+            )}
+            <h2 className="price">
+              <Badge color="success">R$ {this.props.content.Preco}</Badge>
+            </h2>
+            <p>
+              <Button color="primary" onClick={this.props.modalPass}>
+                Tenho interesse
+              </Button>{" "}
+            </p>
           </CardBody>
         </Card>
       </div>

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "garage-sale",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A simple Gatsby site with Airtable for selling stuff",
+  "version": "1.0.0",
+  "author": "Gus Fune <gustavofunee@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "dotenv": "^8.0.0",

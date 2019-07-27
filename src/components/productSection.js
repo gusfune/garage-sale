@@ -1,18 +1,17 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { Alert } from "reactstrap"
 import ProductUnit from "./ProductUnit"
 import Soon from "./Soon"
 
-export default class EletrodomesticosSection extends Component {
+export default class ProductSection extends Component {
   render() {
     return (
       <StaticQuery
         query={graphql`
-          query Eletrodomesticos {
+          query Products {
             allAirtable(
               filter: {
-                table: { eq: "Eletrodomesticos" }
+                table: { in: ["Eletrodomesticos", "Moveis"] }
                 data: { O_que_fazer: { eq: "A Venda" } }
               }
               sort: { order: ASC, fields: data___Name }
@@ -65,12 +64,6 @@ export default class EletrodomesticosSection extends Component {
                 />
               ))}
               {data.allAirtable.edges.length === 0 && <Soon />}
-            </div>
-            <div className="row">
-              <div className="col-12 text-center">
-                <br />
-                <Alert color="primary">Em breve mais itens disponíveis!</Alert>
-              </div>
             </div>
           </div>
         )}

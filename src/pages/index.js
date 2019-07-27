@@ -1,14 +1,10 @@
 import React from "react"
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 import ReactModal from "react-modal"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "react-tabs/style/react-tabs.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.scss"
-import EletrodomesticosSection from "../components/eletrodomesticosSection"
-import MoveisSection from "../components/moveisSection"
-import DiversosSection from "../components/diversosSection"
+import ProductSection from "../components/productSection"
 
 class IndexPage extends React.Component {
   constructor() {
@@ -94,23 +90,7 @@ class IndexPage extends React.Component {
           </p>
         </ReactModal>
 
-        <Tabs>
-          <TabList>
-            <Tab key="Tab0">Eletrônicos & Eletrodomésticos</Tab>
-            <Tab key="Tab1">Móveis</Tab>
-            <Tab key="Tab2">Diversos</Tab>
-          </TabList>
-
-          <TabPanel key="TabPanel0">
-            <EletrodomesticosSection modalPass={this.handleOpenModal} />
-          </TabPanel>
-          <TabPanel key="TabPanel1">
-            <MoveisSection modalPass={this.handleOpenModal} />
-          </TabPanel>
-          <TabPanel key="TabPanel2">
-            <DiversosSection modalPass={this.handleOpenModal} />
-          </TabPanel>
-        </Tabs>
+        <ProductSection modalPass={this.handleOpenModal} />
       </Layout>
     )
   }
